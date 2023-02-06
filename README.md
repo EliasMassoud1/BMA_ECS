@@ -13,3 +13,8 @@ The code name is ECS_BMA_test.m and it performs the following things:
     % Determine what model weights produce maximum likelihood
     % Extract Posterior information
 % Using correlation of posterior samples, estimate Independence information 
+
+The desired metrics will be stored under:
+% Mean BMA posterior weights = 'mean_posterior_BMA_combo_lik'
+% BMA posterior weights = 'posterior_BMA_combo_lik'
+% Independence information = 'I_BMA_samples'
