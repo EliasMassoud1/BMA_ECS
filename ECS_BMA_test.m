@@ -86,23 +86,10 @@ b_post_BMA_lik = A*posterior_BMA_combo_lik';
 % What are mean of posterior weights
 mean_posterior_BMA_combo_lik = mean(posterior_BMA_combo_lik);
 
-% *** Save or Load Posterior samples ***
-% save mean_posterior_BMA_combo_lik.mat mean_posterior_BMA_combo_lik
-% save posterior_BMA_combo_lik.mat posterior_BMA_combo_lik
-% Or Load
-% load mean_posterior_BMA_combo_lik.mat 
-% load posterior_BMA_combo_lik
-
 %% Independence information 
 
 % Using correlation of posterior samples 
 corr_BMA_samples = corr(posterior_BMA_combo_lik) ; % Correlation of posterior samples
 sum_corr_BMA_samples = sum( corr_BMA_samples ); 
 % Independence = -(sum(correlation_values))
-I_BMA_samples = sum_corr_BMA_samples*-1;
-
-
-
-
-    
-    
+I_BMA_samples = sum_corr_BMA_samples*-1;   
